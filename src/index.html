@@ -7,15 +7,22 @@
     <link href="./output.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Ensure the background covers the entire page */
+        /* Ensure the background covers the entire page and adjusts with content */
         .crack-background {
             background-image: url('./images/final.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            min-height: 100vh; /* Ensure it covers the full viewport height */
+            min-height: 100vh; /* Cover at least the full viewport height */
             display: flex;
             flex-direction: column;
+            position: relative; /* For containing the dropdown */
+        }
+
+        /* Ensure the main content grows to fill available space */
+        .main-content {
+            flex: 1; /* Grow to fill remaining space */
+            padding: 1.5rem; /* Add padding */
         }
 
         /* Ensure dropdown menu inherits the background */
@@ -37,7 +44,7 @@
     <!-- Wrap the entire content in .crack-background -->
     <div class="crack-background">
         <!-- Main Content -->
-        <div class="flex-1 p-6">
+        <div class="main-content">
             <div class="max-w-3xl mx-auto bg-white/90 backdrop-blur-lg p-8 rounded-xl shadow-2xl transform transition-all hover:shadow-3xl">
                 <h1 class="text-4xl font-bold text-center mb-8 text-gray-800">Structural Health Monitoring</h1>
                 
@@ -84,32 +91,30 @@
                         Download Report (PDF)
                     </button>
                 </div>
-            </div>
-        </div>
 
-        <!-- Footer with Dropdown -->
-        <footer class="w-full bg-white/50 backdrop-blur-sm text-2xl py-4 rounded-t-xl shadow-lg">
-            <div class="max-w-3xl mx-auto text-center">
-                <div class="relative inline-block">
-                    <!-- Dropdown Button -->
-                    <button id="contributors-dropdown-button" class="text-green-500 hover:text-brown-800 font-extrabold focus:outline-none" aria-expanded="false" aria-controls="contributors-dropdown">
-                        Contributors ▼
-                    </button>
-                    <!-- Dropdown Menu -->
-                    <div id="contributors-dropdown" class="hidden absolute left-1/2 transform -translate-x-1/2 mt-2 w-200 bg-white/50 backdrop-blur-sm rounded-lg shadow-lg border border-brown-200">
-                        <ul class="py-2">
-                            <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Harsh Garg</li>
-                            <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Hemansh Bhagtani</li>
-                            <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Ojaswini Pradhan</li>
-                            <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Priyanshi Katiyar</li>
-                            <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Pari Agarwal</li>
-                            <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Aryan Pareshbhai Patel</li>
-                            <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Manas Sharma</li>
-                        </ul>
+                <!-- Contributors Section Below Download Button -->
+                <div class="text-center mt-10">
+                    <div class="relative inline-block">
+                        <!-- Dropdown Button -->
+                        <button id="contributors-dropdown-button" class="text-green-500 hover:text-brown-800 font-extrabold focus:outline-none" aria-expanded="false" aria-controls="contributors-dropdown">
+                            Contributors ▼
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div id="contributors-dropdown" class="hidden absolute left-1/2 transform -translate-x-1/2 mt-2 w-200 bg-white/50 backdrop-blur-sm rounded-lg shadow-lg border border-brown-200">
+                            <ul class="py-2">
+                                <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Harsh Garg</li>
+                                <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Hemansh Bhagtani</li>
+                                <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Ojaswini Pradhan</li>
+                                <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Priyanshi Katiyar</li>
+                                <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Pari Agarwal</li>
+                                <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Aryan Pareshbhai Patel</li>
+                                <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Manas Sharma</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
     </div>
 
     <!-- JavaScript for Dropdown Toggle -->

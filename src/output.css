@@ -212,6 +212,49 @@
   }
 }
 @layer utilities {
+  #contributors-dropdown {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Add blur effect */
+    position: absolute; /* Absolute positioning */
+    z-index: 1000; /* Ensure it appears above other content */
+    top: 100%; /* Position below the button */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    width: 200px; /* Set a fixed width */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+  }
+  .main-content {
+    flex: 1; /* Grow to fill remaining space */
+    padding: 1.5rem; /* Add padding */
+  }
+  .crack-background {
+    background-image: url('./images/final.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Cover at least the full viewport height */
+    display: flex;
+    flex-direction: column;
+    position: relative; /* For containing the dropdown */
+  }
+  .project-name {
+    position: absolute; /* Position it absolutely within .crack-background */
+    margin-right: 40px;
+    top: 1rem; /* Distance from the top */
+     left: 0.5rem;  /*Distance from the left */
+    font-size: 1.5rem; /* Adjust font size */
+    font-weight: bold; /* Make it bold */
+    color: white; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+    padding: 0.5rem 1rem; /* Add padding */
+    border: 2px solid transparent ; /* Transparent border */
+    border-radius: 2rem; /* Rounded corners */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)); /* Gradient background */
+    backdrop-filter: blur(5px); /* Add blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
+    /*border-image: linear-gradient(to right, #4ade80, #3b82f6) 1;  Gradient border */
+  }
   .\@container {
     container-type: inline-size;
   }

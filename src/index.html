@@ -5,44 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Structural Health Monitoring</title>
     <link href="./output.css" rel="stylesheet">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Ensure the background covers the entire page and adjusts with content */
-        .crack-background {
-            background-image: url('./images/final.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 100vh; /* Cover at least the full viewport height */
-            display: flex;
-            flex-direction: column;
-            position: relative; /* For containing the dropdown */
-        }
-
-        /* Ensure the main content grows to fill available space */
-        .main-content {
-            flex: 1; /* Grow to fill remaining space */
-            padding: 1.5rem; /* Add padding */
-        }
-
-        /* Ensure dropdown menu inherits the background */
-        #contributors-dropdown {
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-            backdrop-filter: blur(10px); /* Add blur effect */
-            position: absolute; /* Absolute positioning */
-            z-index: 1000; /* Ensure it appears above other content */
-            top: 100%; /* Position below the button */
-            left: 50%; /* Center horizontally */
-            transform: translateX(-50%); /* Adjust for centering */
-            width: 200px; /* Set a fixed width */
-            border-radius: 0.5rem; /* Rounded corners */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
-        }
-    </style>
 </head>
 <body class="font-inter">
     <!-- Wrap the entire content in .crack-background -->
     <div class="crack-background">
+        <!-- Project Name -->
+        <div class="project-name">
+            Structural Health Monitoring
+        </div>
+
         <!-- Main Content -->
         <div class="main-content">
             <div class="max-w-3xl mx-auto bg-white/90 backdrop-blur-lg p-8 rounded-xl shadow-2xl transform transition-all hover:shadow-3xl">
@@ -117,21 +90,6 @@
         </div>
     </div>
 
-    <!-- JavaScript for Dropdown Toggle -->
-    <script>
-        const dropdownButton = document.getElementById('contributors-dropdown-button');
-        const dropdownMenu = document.getElementById('contributors-dropdown');
-
-        dropdownButton.addEventListener('click', () => {
-            dropdownMenu.classList.toggle('hidden');
-        });
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (event) => {
-            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                dropdownMenu.classList.add('hidden');
-            }
-        });
-    </script>
+    <script src="./content.js"></script>
 </body>
 </html>

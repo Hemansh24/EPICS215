@@ -20,8 +20,16 @@
 
         /* Ensure dropdown menu inherits the background */
         #contributors-dropdown {
-            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
             backdrop-filter: blur(10px); /* Add blur effect */
+            position: absolute; /* Absolute positioning */
+            z-index: 1000; /* Ensure it appears above other content */
+            top: 100%; /* Position below the button */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust for centering */
+            width: 200px; /* Set a fixed width */
+            border-radius: 0.5rem; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
         }
     </style>
 </head>
@@ -95,6 +103,7 @@
                             <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Ojaswini Pradhan</li>
                             <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Priyanshi Katiyar</li>
                             <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Pari Agarwal</li>
+                            <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Aryan Pareshbhai Patel</li>
                             <li class="px-4 py-2 text-brown-600 hover:bg-brown-50">Manas Sharma</li>
                         </ul>
                     </div>

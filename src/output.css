@@ -212,6 +212,7 @@
   }
 }
 @layer utilities {
+  
   #contributors-dropdown {
     background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
     backdrop-filter: blur(10px); /* Add blur effect */
@@ -226,6 +227,7 @@
   }
   .main-content {
     flex: 1; /* Grow to fill remaining space */
+    margin-top: 5rem;
     padding: 1.5rem; /* Add padding */
   }
   .crack-background {
@@ -239,7 +241,8 @@
     position: relative; /* For containing the dropdown */
   }
   .project-name {
-    position: absolute; /* Position it absolutely within .crack-background */
+    z-index: 1000;
+    position: fixed; /* Position it absolutely within .crack-background */
     margin-right: 40px;
     top: 1rem; /* Distance from the top */
      left: 0.5rem;  /*Distance from the left */
